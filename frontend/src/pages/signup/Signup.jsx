@@ -1,6 +1,7 @@
 import GenderCheckbox from './GenderCheckbox'
 import { Link } from 'react-router-dom';
 import {useState} from 'react';
+import useSignup from '../../hooks/useSignup';
 
 const Signup = () => {
 
@@ -12,12 +13,14 @@ const Signup = () => {
     gender: ''
   });
 
+  const {loading, signup} = useSignup();
+
   const handleCheckboxChange = (gender) =>{
     setInputs({...inputs, gender});
   }
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) =>{
     e.preventDefault();
-    console.log(inputs);
+    await signup(inputs);
   }
   return (
     <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
@@ -50,7 +53,7 @@ const Signup = () => {
             <label className='label p-2'>
                   <span className='text-base label-text'>Confirm Password</span>
               </label>
-              <input type="text" placeholder='Confirm Password' className='w-full input input-bordered h-10' value={inputs.confirmPassword} onChange={(e) => {setInputs({...inputs, confirmPassword: e.target.value})}}/>
+              <input type="password" placeholder='Confirm Password' className='w-full input input-bordered h-10' value={inputs.confirmPassword} onChange={(e) => {setInputs({...inputs, confirmPassword: e.target.value})}}/>
             </div>
 
             <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}/>
@@ -60,8 +63,8 @@ const Signup = () => {
             </Link>
 
             <div>
-            <button className='btn btn-block btn-sm mt-2'>
-                Sign Up
+            <button className='btn btn-block btn-sm mt-2' disabled={loading}>
+                {loading ? <span className='loading loading-spinner'></span> : "Sign up"}
               </button>
             </div>
           </form>
