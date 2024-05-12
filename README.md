@@ -1,6 +1,7 @@
 # ChatApp
 
 Welcome to ChatApp, a React-based chat application powered by MongoDB, Express, DaisyUI, and Tailwind CSS.
+It is learnt from *AS A PROGRAMMER* YouTube Channel.
 
 ## Getting Started
 
