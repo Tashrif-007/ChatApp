@@ -10,7 +10,7 @@ To run this application locally, follow these steps:
 ```bash
 git clone https://github.com/your-username/chatapp.git
 ```
-Install Dependencies for both backend and frontend
+2. Install Dependencies for both backend and frontend
 ```
 cd chatapp/backend
 npm install
@@ -18,21 +18,21 @@ npm install
 cd ../frontend
 npm install
 ```
-Create a .env file in the root directory of the backend folder (chatapp/backend) with the following environment variables:
+3. Create a .env file in the root directory of the backend folder (chatapp/backend) with the following environment variables:
 ```
 PORT=5000
 JWT_SECRET_KEY=your_secret_key
 MONGO_DB_URI=your_mongodb_uri
 ```
-# Update the socket context file located at frontend/src/context/socketcontext.jsx. Replace 'http://localhost:5000' with your local server URL.
-# Start the backend server:
+4. Update the socket context file located at frontend/src/context/socketcontext.jsx. Replace 'http://localhost:5000' with your local server URL.
+5. Start the backend server:
 ```bash
 cd ../backend
 npm run server
 ```
-# Start the frontend development server:
+6. Start the frontend development server:
 ```bash
 cd ../frontend
 npm run dev
 ```
-# Access the application in your web browser at 'http://localhost:*SERVER_URL*'
+7. Access the application in your web browser at 'http://localhost:*SERVER_URL*'
