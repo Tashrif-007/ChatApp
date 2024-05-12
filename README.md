@@ -11,7 +11,7 @@ To run this application locally, follow these steps:
 git clone https://github.com/your-username/chatapp.git
 ```
 2. Install Dependencies for both backend and frontend
-```
+```bash
 cd chatapp/backend
 npm install
 
