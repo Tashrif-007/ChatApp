@@ -9,7 +9,7 @@ To run this application locally, follow these steps:
 
 1. Clone the repository to your local machine:
 ```bash
-git clone https://github.com/your-username/chatapp.git
+git clone https://github.com/Tashrif-007/chatapp.git
 ```
 2. Install Dependencies for both backend and frontend
 ```bash
